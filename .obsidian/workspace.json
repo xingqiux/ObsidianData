@@ -1,47 +1,20 @@
 {
   "main": {
-    "id": "822d5294d7bf75d2",
+    "id": "aa7c1f389ecdc727",
     "type": "split",
     "children": [
       {
-        "id": "c8993bc293e17a7e",
+        "id": "500d4579f4333736",
         "type": "tabs",
         "children": [
           {
-            "id": "1760114ff11316f5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "技术文档/拓展 JWT 与 UUID 的关系.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "拓展 JWT 与 UUID 的关系"
-            }
-          },
-          {
-            "id": "aedbcb7b8f2adc20",
+            "id": "114dc7359049821f",
             "type": "leaf",
             "state": {
               "type": "empty",
               "state": {},
               "icon": "lucide-file",
               "title": "新标签页"
-            }
-          },
-          {
-            "id": "16be4b0362153a5f",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "images/Pasted image 20250407111629.png"
-              },
-              "icon": "lucide-image",
-              "title": "Pasted image 20250407111629"
             }
           }
         ]
@@ -50,28 +23,28 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "2a7d0e2186293106",
+    "id": "6f4f2d6841fc37ea",
     "type": "split",
     "children": [
       {
-        "id": "4fbae14cac8cf712",
+        "id": "b366fc8b72efa0ba",
         "type": "tabs",
         "children": [
           {
-            "id": "da43021e5fcbe340",
+            "id": "9a58a0dc6e576cf9",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": true
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
             }
           },
           {
-            "id": "b6e728b948b17ff6",
+            "id": "1950d022475f2672",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -88,7 +61,7 @@
             }
           },
           {
-            "id": "718aa130718de85e",
+            "id": "6c843ca40581a1f9",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -101,23 +74,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 347.5
+    "width": 300
   },
   "right": {
-    "id": "1302ff22bcca3537",
+    "id": "707b6373cbfdc1d5",
     "type": "split",
     "children": [
       {
-        "id": "25d707c64f4aef68",
+        "id": "6005f7eac71cc30b",
         "type": "tabs",
         "children": [
           {
-            "id": "8d1b85f7b6d66144",
+            "id": "2cd5e37693ab46c8",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "底层原理/面试八股 - 集合知识.md",
+                "file": "原理笔记/Redis - 原理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,25 +100,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "面试八股 - 集合知识 的反向链接列表"
+              "title": "Redis - 原理 的反向链接列表"
             }
           },
           {
-            "id": "24dde3a3e57e2b43",
+            "id": "917ff730a69a413a",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "底层原理/面试八股 - 集合知识.md",
+                "file": "原理笔记/Redis - 原理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "面试八股 - 集合知识 的出链列表"
+              "title": "Redis - 原理 的出链列表"
             }
           },
           {
-            "id": "c87f5506a44125a6",
+            "id": "d8a303b3b308c750",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -160,22 +133,22 @@
             }
           },
           {
-            "id": "4fde8dc49fea3a89",
+            "id": "4c7200c3ad612cc5",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "底层原理/面试八股 - 集合知识.md",
+                "file": "原理笔记/Java - 多线程.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "面试八股 - 集合知识 的大纲"
+              "title": "Java - 多线程 的大纲"
             }
           },
           {
-            "id": "14e794185956431d",
+            "id": "e8e045ce950ac477",
             "type": "leaf",
             "state": {
               "type": "quiet-outline",
@@ -189,7 +162,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 288.5
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -198,57 +172,28 @@
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "oz-clear-unused-images:Clear Unused Images": false
     }
   },
-  "active": "1760114ff11316f5",
+  "active": "9a58a0dc6e576cf9",
   "lastOpenFiles": [
-    "技术文档/Java Comparator 排序规则函数式接口文档.md",
-    "技术文档/mybatis plus 与 xml 方式的区别.md",
-    "技术文档/拓展 JWT 与 UUID 的关系.md",
-    "技术文档/拓展 form-data 与 json 的区别.md",
-    "底层/Java - 堆.md",
-    "工具文档/Java Spring AOP - 文档.md",
-    "工具文档/MultipartFile - 使用方法.md",
-    "Java/Spring Cloud 学习路线.md",
-    "Java/Spring 组件 Nacos.md",
-    "工具文档/Spring Cache - 缓存初识.md",
-    "Java/Spring 微服务架构的核心组件实例.md",
-    "Bug 记录/Spring 事务失效.md",
-    "工具文档/Spring - 日志循环依赖和监听事件.md",
-    "工具文档/Spring - 将实体类设定特定 JSON 格式.md",
-    "工具文档/Java -  集合框架.md",
-    "工具文档/Java  - 集合，常用工具类，Lambda，Stream，String类方法.md",
-    "工具文档/Mybatis - 批量插入 xml 编写.md",
-    "工具文档/Stream - API 使用指南.md",
-    "工具文档/Spring Task - 使用方法.md",
-    "工具文档/easyexcel - 使用.md",
-    "工具文档/AWS - 的 s3 SDK 使用方法.md",
-    "Bug 记录/Git - 推送连接失败问题解决方案.md",
-    "Bug 记录/MybatisPlus - 不同的分页插件导致分页不同接收不到数据.md",
     "images/Pasted image 20250311102636.png",
-    "images/Pasted image 20250311103917.png",
     "images/Pasted image 20250311102853.png",
-    "images/Pasted image 20250311102708.png",
-    "工具文档/Mybatis Plus - 分页查询方法.md",
-    "images/Pasted image 20250407111629.png",
-    "images/面试八股 数据结构/Pasted image 20250324141322.png",
-    "images/面试八股 数据结构/Pasted image 20250324114055.png",
-    "images/面试八股 数据结构/Pasted image 20250324113058.png",
-    "images/面试八股 数据结构/Pasted image 20250324091229.png",
-    "images/面试八股 数据结构/Pasted image 20250324112914.png",
-    "Bug 记录/Redis - RedisTemplate 泛型不匹配问题.md",
-    "Bug 记录/Spring AOP - 配置 AOP 之后无法启动项目.md",
-    "工具文档",
-    "Bug 记录",
-    "技术文档",
-    "Go",
-    "images/assets",
-    "未命名.canvas",
-    "Java",
-    "算法",
-    "模板",
-    "底层",
-    "images/面试八股 数据结构"
+    "原理笔记/Java - 多线程.md",
+    "原理笔记/Java - 堆.md",
+    "原理笔记/Java - 集合.md",
+    "RestClient.md",
+    "images/Spring Cloud Alibaba Nacos 注册配置中心 1.png",
+    "images/面试八股 - Redis 1.png",
+    "images/Java - 多线程-31.png",
+    "images/Java - 多线程-30.png",
+    "images/Java - 多线程-29.png",
+    "images/Java - 多线程-28.png",
+    "images/Java - 多线程-27.png",
+    "images/Capture_20250508_100949.jpg",
+    "images/Java - 多线程-26.png",
+    "原理笔记/Redis - 原理.md",
+    "原理笔记/AurainRPC - 简易 RPC 框架开发.md"
   ]
 }
