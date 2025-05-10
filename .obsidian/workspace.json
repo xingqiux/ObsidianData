@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "500d4579f4333736",
+        "id": "2f397f41d58e1295",
         "type": "tabs",
         "children": [
           {
-            "id": "114dc7359049821f",
+            "id": "65d8be7690cc10f2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "工具文档/Spring Cache - 缓存初识.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "Spring Cache - 缓存初识"
             }
           }
         ]
@@ -173,11 +177,30 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "oz-clear-unused-images:Clear Unused Images": false
+      "oz-clear-unused-images:Clear Unused Images": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9a58a0dc6e576cf9",
+  "active": "65d8be7690cc10f2",
   "lastOpenFiles": [
+    "工具文档/Spring - 日志循环依赖和监听事件.md",
+    "工具文档/Spring - 将实体类设定特定 JSON 格式.md",
+    "工具文档/Java Spring AOP - 文档.md",
+    "工具文档/Java 多线程 线程同步和锁.md",
+    "工具文档/Java 多线程 线程池疑问.md",
+    "工具文档/Java 多线程 线程池.md",
+    "工具文档/Java -  集合框架.md",
+    "工具文档/Java 多线程.md",
+    "原理笔记/读书 - 《高性能 MySQL》.md",
+    "个人笔记/A_A_A_A_A老婆温温.md",
+    "pages/tbnb/pages/main/housedetail",
+    "pages/tbnb/pages/main",
+    "pages/tbnb/pages",
+    "pages/tbnb",
+    "pages",
+    "未命名.canvas",
+    "2025-05-09.md",
+    "images/Java - 多线程-31.png",
     "images/Pasted image 20250311102636.png",
     "images/Pasted image 20250311102853.png",
     "原理笔记/Java - 多线程.md",
@@ -186,13 +209,11 @@
     "RestClient.md",
     "images/Spring Cloud Alibaba Nacos 注册配置中心 1.png",
     "images/面试八股 - Redis 1.png",
-    "images/Java - 多线程-31.png",
     "images/Java - 多线程-30.png",
     "images/Java - 多线程-29.png",
     "images/Java - 多线程-28.png",
     "images/Java - 多线程-27.png",
     "images/Capture_20250508_100949.jpg",
-    "images/Java - 多线程-26.png",
     "原理笔记/Redis - 原理.md",
     "原理笔记/AurainRPC - 简易 RPC 框架开发.md"
   ]
