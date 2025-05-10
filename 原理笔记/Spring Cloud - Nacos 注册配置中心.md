@@ -4,7 +4,7 @@
 ## 主要功能
 
 ### 服务注册与发现
-![[Spring Cloud Alibaba Nacos 注册配置中心 1.png|575]]
+![[Spring Cloud Alibaba Nacos 注册配置中心 1.png|525]]
 注册中心的主要作用是作为协调者，主要作用是将分开的微服务项目通过服务注册和发现模型，实现项目的**跨进程跨主机进行通信**，实现**相互通信**和**相互调用**
 
 微服务启动过程中，将自身的服务名称，IP 地址，端口号发送到注册中心。
@@ -15,9 +15,13 @@
 
 主要的功能是动态的更新各个微服务的配置信息
 
-## 接入 Nacos 配置中心
+## Nacos 配置中心
 
-### 导入依赖
+### 基础使用
+
+![[Spring Cloud - Nacos 注册配置中心-3.png|650]]
+
+#### 导入依赖
 
 因为这个文档本质上是使用 Spring Cloud ，所以需要提前导入 Spring Cloud 使用的依赖，然后导入 Nacos 配置中心的依赖
 
@@ -51,6 +55,8 @@ spring.cloud.nacos.config.server-addr=127.0.0.1:8848
 spring.cloud.nacos.config.refresh.enabled=true
 ```
 
+^c35ca4
+
 这里配置`spring.cloud.nacos.config.extension-configs=yaml ` 是可选，默认是使用 properties 配置
 
 ![[Spring Cloud Alibaba Nacos 注册配置中心 1.png]]
@@ -68,9 +74,9 @@ ${prefix}-${spring.profiles.active}.${file-extension}
 
 **这一部分是超级重点，这个配置的文件必须要设定清楚，不然无法自动更新！！！！！**
 
-### 配置 Nacos
+#### 配置 Nacos
 
-![[Spring Cloud Alibaba Nacos 注册配置中心-1 1.png]]
+![[Spring Cloud Alibaba Nacos 注册配置中心-1 1.png|650]]
 
 接下是应用配置，这里主要部分是
 
@@ -85,7 +91,7 @@ spring:
 ![[Spring Cloud Alibaba Nacos 注册配置中心-2 1.png|500]]
 注意这里 Data ID 中的 properties 前面必须是 spring.application.name
 
-### 导入配置信息
+#### 导入配置信息
 
 导入配置信息的 controller 代码就是最基础的导入配置文件中代码即可，加上 `@RefreshScope ` 自动刷新即可 
 
@@ -113,7 +119,7 @@ public class ConfigControllerExample {
 }
 ```
 
-### 运行测试代码
+#### 运行测试代码
 
 ```java
 @SpringBootApplication  
@@ -126,115 +132,140 @@ public class Main {
 
 按照以上内容运行即可得到一个最基础的 demo 代码用语 nacos 的配置中心体现
 
+### 配置优先级
+
+Spring 遵循 先导入优先和外部优先规则
+
+```json
+spring.config.import=nacos:service-testConfig.properties,nacos:common.properties
+```
+
+### 数据隔离
+
+当一个项目有多个环境例如 dev , test , prod 每一个环境需要的配置都不同，则需要不同的环境变量，这时需要进行数据隔离
+
+![[Spring Cloud - Nacos 注册配置中心-4.png|650]]
+
+在上图中，说明了，Namespace 用来区分开发环境， Group 进行多种微服务的分组， Data-id 作为实际数据集实现多种配置，来实现
+
+
 ## 接入 Nacos 注册中心
 
+### 服务注册与发现
 
-本节通过实现一个简单的 `echo service` 演示如何在您的 Spring Cloud 项目中启用 Nacos 的服务发现功能，如下图示:
-![[Spring Cloud Alibaba Nacos 注册配置中心-3 1.png]]
-完整示例代码请参考：[nacos-spring-cloud-discovery-example](https://github.com/nacos-group/nacos-examples/tree/master/nacos-spring-cloud-example/nacos-spring-cloud-discovery-example)
+因为这里已经导入了依赖，所以只需要完成以下任务
 
-### 1. 添加依赖：
+1. 创建模块项目
+2. 配置端口，服务名称，nacos 连接信息 [[#^c35ca4|配置]]
+3. 启动实例，如果有多个可以启动多个实例进行服务注册
 
+### 获取实例的方式
+
+使用 Spring 自动注入
+```java
+@Autowired  
+private NacosServiceDiscovery nacosServiceDiscovery;
+```
+这里面的基础方法有
+
+```java
+List<String> services = nacosServiceDiscovery.getServices();
+// services = [service-provider, service-consumer]
+
+List<ServiceInstance> instances = nacosServiceDiscovery.getInstances("service-provider"); //service-provider为需要的服务地址
+ServiceInstance instance = instances.get(0);  
+String url = "http://"+instance.getHost() + ":" + instance.getPort() + "/order";
+// url = http://192.168.137.1:8890/order
+```
+
+通过这些方法就可以获取到实例的具体地址从而进行远程调用
+
+### 基础远程调用
+
+1. 在启动类设置 bean 
+   ```java
+	   @Bean  
+		public RestTemplate restTemplate() {  
+		    return new RestTemplate();  
+		}
+	```
+2. 进行自动注入然后调用
+
+```java
+@Autowired  
+private  RestTemplate restTemplate;
+
+Order proOrder = restTemplate.getForObject( url, Order.class);
+```
+
+
+### 负载均衡
+
+主要是使用 LoadBalancerClient
+1. 导入依赖
+2. 自动注入
+3. 使用 chose() 方法根据他的负载平衡算法选择服务的实例
+
+#### 导入依赖
 ```html
-<dependency>
-    <groupId>com.alibaba.cloud</groupId>
-    <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-    <version>${latest.version}</version>
+<dependency>  
+	<groupId>org.springframework.cloud</groupId>  
+	<artifactId>spring-cloud-starter-loadbalancer</artifactId>  
 </dependency>
 ```
 
-**注意**：版本 [2.1.x.RELEASE](https://mvnrepository.com/artifact/com.alibaba.cloud/spring-cloud-starter-alibaba-nacos-discovery) 对应的是 Spring Boot 2.1.x 版本。版本 [2.0.x.RELEASE](https://mvnrepository.com/artifact/com.alibaba.cloud/spring-cloud-starter-alibaba-nacos-discovery) 对应的是 Spring Boot 2.0.x 版本，版本 [1.5.x.RELEASE](https://mvnrepository.com/artifact/com.alibaba.cloud/spring-cloud-starter-alibaba-nacos-discovery) 对应的是 Spring Boot 1.5.x 版本。
-
-更多版本对应关系参考：[版本说明 Wiki](https://github.com/spring-cloud-incubator/spring-cloud-alibaba/wiki/%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E)
-
-### 2. 配置服务提供者，从而服务提供者可以通过 Nacos 的服务注册发现功能将其服务注册到 Nacos server 上。
-
-i. 在 `application.properties` 中配置 Nacos server 的地址：
-
-```json
-server:  
-  port: 8890  
-  
-spring:  
-  application:  
-    name: service-provider  
-  
-  cloud:  
-    nacos:  
-      server-addr: 127.0.0.1:8848
-```
-
-ii. 通过 Spring Cloud 原生注解 `@EnableDiscoveryClient` 开启服务注册发现功能：
+#### 自动注入与使用
 
 ```java
-@SpringBootApplication
-@EnableDiscoveryClient
-public class NacosProviderApplication {
+@Autowired  
+	private LoadBalancerClient loadBalancerClient;
 
-  public static void main(String[] args) {
-    SpringApplication.run(NacosProviderApplication.class, args);
-  }
 
-  @RestController
-  class EchoController {
-    @RequestMapping(value = "/echo/{string}", method = RequestMethod.GET)
-    public String echo(@PathVariable String string) {
-      return "Hello Nacos Discovery " + string;
-    }
-  }
+ServiceInstance instance = loadBalancerClient.choose("service-provider");  
+  
+String url = "http://"+instance.getHost() + ":" + instance.getPort() + "/order";  
+log.info("url = " + url );
+```
+
+![[Spring Cloud - Nacos 注册配置中心.png|550]]
+使用这个代码测试负载均衡得到结果
+![[Spring Cloud - Nacos 注册配置中心-1.png]]
+说明负载均衡正常运行
+
+### 注解负载均衡
+
+直接在配置 RestTemplate 的时候添加一个 @LoadBalanced 注解，即可让 restTemplate 获得动态负载能力
+
+#### 进行负载均衡设置
+```java
+@LoadBalanced  
+@Bean  
+public RestTemplate restTemplate() {  
+    return new RestTemplate();  
 }
 ```
 
-### 3. 配置服务消费者，从而服务消费者可以通过 Nacos 的服务注册发现功能从 Nacos server 上获取到它要调用的服务。
+#### 进行负载均衡调用
 
-i. 在 `application.properties` 中配置 Nacos server 的地址：
-
-```json
-server:  
-  port: 8891  
-  
-spring:  
-  application:  
-    name: service-consumer  
-  
-  
-  cloud:  
-    nacos:  
-      server-addr: 127.0.0.1:8848
-```
-
-ii. 通过 Spring Cloud 原生注解 `@EnableDiscoveryClient` 开启服务注册发现功能。给 [RestTemplate](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-resttemplate.html) 实例添加 `@LoadBalanced` 注解，开启 `@LoadBalanced` 与 [Ribbon](https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-ribbon.html) 的集成：
+将 url 配置为服务的名称(这里为 service-provider )
 
 ```java
-@SpringBootApplication
-@EnableDiscoveryClient
-public class NacosConsumerApplication {
-
-    @LoadBalanced
-    @Bean
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
-    }
-
-    public static void main(String[] args) {
-        SpringApplication.run(NacosConsumerApplication.class, args);
-    }
-
-    @RestController
-    public class TestController {
-
-        private final RestTemplate restTemplate;
-
-        @Autowired
-        public TestController(RestTemplate restTemplate) {this.restTemplate = restTemplate;}
-
-        @RequestMapping(value = "/echo/{str}", method = RequestMethod.GET)
-        public String echo(@PathVariable String str) {
-            return restTemplate.getForObject("http://service-provider/echo/" + str, String.class);
-        }
-    }
+@GetMapping("balanceAnnotation")  
+public Order userOrderBalanceAnnotation() throws NacosException {  
+    return restTemplate.getForObject( "http://service-provider/order", Order.class);  
 }
 ```
+(结果也是负载均衡的调用，但是我懒得一个个看了)
 
-### 4. 启动 `ProviderApplication` 和 `ConsumerApplication`
-调用 `http://localhost:8080/echo/2018`，返回内容为 `Hello Nacos Discovery 2018`。
+
+# 原理问题
+
+## 如果注册中心宕机，是否还能远程调用
+
+在实际的设计中，如果每次都向注册中心请求微服务的地址列表，在给对方服务发送地址请求，那这个过程非常耗费性能，所以可以将实例的信息进行缓存，也就是 **实例缓存** ，工作流程就变成了，当需要发起请求的时候，会从实例缓存中获取，然后发送请求，而实例缓存与注册中心进行同步和实时更新
+
+那如果注册中心宕机了，就可以分为两种情况
+1. 远程调用过服务：可以不依赖注册中心进行访问，可以通过
+2. 没有调用过：无法进行远程调用
+
+![[Spring Cloud - Nacos 注册配置中心-2.png]]

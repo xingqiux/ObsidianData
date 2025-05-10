@@ -46,7 +46,7 @@
 
 主要需要学习的内容包括 
 微服务：SpringBoot
-注册中心/配置中心：[[Spring Cloud Alibaba Nacos 注册配置中心]]
+注册中心/配置中心：[[Spring Cloud - Nacos 注册配置中心]]
 网关：Spring Cloud Gateway
 远程调用：Spring Cloud OpenFeign
 服务熔断：Spring Cloud Alibaba Sentinel
