@@ -212,6 +212,13 @@
   },
   "active": "65d8be7690cc10f2",
   "lastOpenFiles": [
+    "images/Mysql - 优化-6.png",
+    "images/Mysql - 优化-5.png",
+    "images/Mysql - 优化-4.png",
+    "images/Mysql - 优化-3.png",
+    "images/Mysql - 优化-2.png",
+    "images/Mysql - 优化-1.png",
+    "images/Mysql - 优化.png",
     "原理笔记/Redis - 原理.md",
     "原理笔记/读书 - 《高性能 MySQL》.md",
     "原理笔记/Mysql - 优化.md",
@@ -234,9 +241,6 @@
     "images/Spring Cloud - Nacos 注册配置中心-5.png",
     "images/Spring Cloud - Nacos 注册配置中心-4.png",
     "images/Spring Cloud - Nacos 注册配置中心-3.png",
-    "images/Spring Cloud - Nacos 注册配置中心-2.png",
-    "images/Spring Cloud - Nacos 注册配置中心-1.png",
-    "images/Spring Cloud - Nacos 注册配置中心.png",
     "原理笔记/Spring Colud - 微服务的原理内容.md",
     "工具文档/Spring Cloud - Nacos 注册与配置中心.md",
     "工具文档/Spring - 日志循环依赖和监听事件.md",
@@ -244,15 +248,11 @@
     "工具文档/Java Spring AOP - 文档.md",
     "工具文档/Java 多线程 线程同步和锁.md",
     "工具文档/Java 多线程 线程池疑问.md",
-    "工具文档/Java 多线程 线程池.md",
     "pages/tbnb/pages/main/housedetail",
     "pages/tbnb/pages/main",
     "pages/tbnb/pages",
     "pages/tbnb",
     "pages",
-    "未命名.canvas",
-    "images/Java - 多线程-31.png",
-    "images/Pasted image 20250311102636.png",
-    "images/Pasted image 20250311102853.png"
+    "未命名.canvas"
   ]
 }
