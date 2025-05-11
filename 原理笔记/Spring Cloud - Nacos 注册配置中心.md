@@ -268,4 +268,8 @@ public Order userOrderBalanceAnnotation() throws NacosException {
 1. 远程调用过服务：可以不依赖注册中心进行访问，可以通过
 2. 没有调用过：无法进行远程调用
 
-![[Spring Cloud - Nacos 注册配置中心-2.png]]
+![[Spring Cloud - Nacos 注册配置中心-2.png|900]]
+
+# 总结
+
+![[Spring Cloud - Nacos 注册配置中心-6.png]]
