@@ -195,8 +195,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 317.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -212,13 +211,17 @@
   },
   "active": "65d8be7690cc10f2",
   "lastOpenFiles": [
-    "images/Mysql - 优化-6.png",
-    "images/Mysql - 优化-5.png",
-    "images/Mysql - 优化-4.png",
-    "images/Mysql - 优化-3.png",
-    "images/Mysql - 优化-2.png",
-    "images/Mysql - 优化-1.png",
-    "images/Mysql - 优化.png",
+    "images/Mysql - 优化-20.png",
+    "images/Mysql - 优化-19.png",
+    "images/Mysql - 优化-18.png",
+    "images/Mysql - 优化-17.png",
+    "images/Mysql - 优化-16.png",
+    "images/Mysql - 优化-15.png",
+    "images/Mysql - 优化-14.png",
+    "images/Mysql - 优化-13.png",
+    "images/Mysql - 优化-12.png",
+    "images/Mysql - 优化-11.png",
+    "images/Mysql - 优化-10.png",
     "原理笔记/Redis - 原理.md",
     "原理笔记/读书 - 《高性能 MySQL》.md",
     "原理笔记/Mysql - 优化.md",
@@ -237,10 +240,6 @@
     "Spring - value 注解.md",
     "工具文档/Spring Cache - 缓存初识.md",
     "原理笔记/Spring Cloud - Nacos 注册配置中心.md",
-    "images/Spring Cloud - Nacos 注册配置中心-6.png",
-    "images/Spring Cloud - Nacos 注册配置中心-5.png",
-    "images/Spring Cloud - Nacos 注册配置中心-4.png",
-    "images/Spring Cloud - Nacos 注册配置中心-3.png",
     "原理笔记/Spring Colud - 微服务的原理内容.md",
     "工具文档/Spring Cloud - Nacos 注册与配置中心.md",
     "工具文档/Spring - 日志循环依赖和监听事件.md",
