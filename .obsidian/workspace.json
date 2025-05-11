@@ -49,8 +49,7 @@
               "title": "Spring - value 注解"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -107,8 +106,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "707b6373cbfdc1d5",
@@ -210,13 +208,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c7f8521fc1d932d4",
+  "active": "65d8be7690cc10f2",
   "lastOpenFiles": [
+    "原理笔记/Spring Cloud - Nacos 注册配置中心.md",
     "images/Spring Cloud - Nacos 注册配置中心-6.png",
     "images/Spring Cloud - Nacos 注册配置中心-5.png",
     "images/Spring Cloud - Nacos 注册配置中心-4.png",
     "Spring - value 注解.md",
-    "原理笔记/Spring Cloud - Nacos 注册配置中心.md",
     "images/Spring Cloud - Nacos 注册配置中心-3.png",
     "images/Spring Cloud - Nacos 注册配置中心-2.png",
     "images/Spring Cloud - Nacos 注册配置中心-1.png",
@@ -248,7 +246,6 @@
     "原理笔记/Java - 堆.md",
     "原理笔记/Java - 集合.md",
     "RestClient.md",
-    "images/Spring Cloud Alibaba Nacos 注册配置中心 1.png",
     "原理笔记/Redis - 原理.md",
     "原理笔记/AurainRPC - 简易 RPC 框架开发.md"
   ]

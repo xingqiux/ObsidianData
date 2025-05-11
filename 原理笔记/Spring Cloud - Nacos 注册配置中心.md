@@ -272,4 +272,4 @@ public Order userOrderBalanceAnnotation() throws NacosException {
 
 # 总结
 
-![[Spring Cloud - Nacos 注册配置中心-6.png]]
+![[Spring Cloud - Nacos 注册配置中心-6.png|875]]
