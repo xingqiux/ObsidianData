@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工具文档/Spring Cache - 缓存初识.md",
+                "file": "原理笔记/Mysql - 优化.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Spring Cache - 缓存初识"
+              "title": "Mysql - 优化"
             }
           },
           {
@@ -106,7 +106,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "707b6373cbfdc1d5",
@@ -194,7 +195,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -210,43 +212,47 @@
   },
   "active": "65d8be7690cc10f2",
   "lastOpenFiles": [
+    "原理笔记/Redis - 原理.md",
+    "原理笔记/读书 - 《高性能 MySQL》.md",
+    "原理笔记/Mysql - 优化.md",
+    "原理笔记/MySQL 优化.md",
+    "技术文档/AurainRPC - 简易 RPC 框架开发.md",
+    "原理笔记/源码 - HashMap 源码分析.md",
+    "原理笔记/算法 - 字符串编码.md",
+    "工具文档/笔记 - 数据结构与算法.md",
+    "原理笔记/笔记 - 浅拷贝和深拷贝.md",
+    "原理笔记/面试八股 - Spring.md",
+    "原理笔记/面试八股 - JVM.md",
+    "原理笔记/面试八股 - Java 语言基础.md",
+    "原理笔记/笔记 - JWT.md",
+    "原理笔记/Java - 集合.md",
+    "原理笔记/Java - 多线程.md",
+    "Spring - value 注解.md",
+    "工具文档/Spring Cache - 缓存初识.md",
     "原理笔记/Spring Cloud - Nacos 注册配置中心.md",
     "images/Spring Cloud - Nacos 注册配置中心-6.png",
     "images/Spring Cloud - Nacos 注册配置中心-5.png",
     "images/Spring Cloud - Nacos 注册配置中心-4.png",
-    "Spring - value 注解.md",
     "images/Spring Cloud - Nacos 注册配置中心-3.png",
     "images/Spring Cloud - Nacos 注册配置中心-2.png",
     "images/Spring Cloud - Nacos 注册配置中心-1.png",
     "images/Spring Cloud - Nacos 注册配置中心.png",
     "原理笔记/Spring Colud - 微服务的原理内容.md",
     "工具文档/Spring Cloud - Nacos 注册与配置中心.md",
-    "工具文档/Spring Cache - 缓存初识.md",
     "工具文档/Spring - 日志循环依赖和监听事件.md",
     "工具文档/Spring - 将实体类设定特定 JSON 格式.md",
     "工具文档/Java Spring AOP - 文档.md",
     "工具文档/Java 多线程 线程同步和锁.md",
     "工具文档/Java 多线程 线程池疑问.md",
     "工具文档/Java 多线程 线程池.md",
-    "工具文档/Java -  集合框架.md",
-    "工具文档/Java 多线程.md",
-    "原理笔记/读书 - 《高性能 MySQL》.md",
-    "个人笔记/A_A_A_A_A老婆温温.md",
     "pages/tbnb/pages/main/housedetail",
     "pages/tbnb/pages/main",
     "pages/tbnb/pages",
     "pages/tbnb",
     "pages",
     "未命名.canvas",
-    "2025-05-09.md",
     "images/Java - 多线程-31.png",
     "images/Pasted image 20250311102636.png",
-    "images/Pasted image 20250311102853.png",
-    "原理笔记/Java - 多线程.md",
-    "原理笔记/Java - 堆.md",
-    "原理笔记/Java - 集合.md",
-    "RestClient.md",
-    "原理笔记/Redis - 原理.md",
-    "原理笔记/AurainRPC - 简易 RPC 框架开发.md"
+    "images/Pasted image 20250311102853.png"
   ]
 }
