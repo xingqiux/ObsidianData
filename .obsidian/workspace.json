@@ -106,8 +106,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "707b6373cbfdc1d5",
@@ -195,7 +194,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 317.5
+    "width": 314.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -211,20 +210,21 @@
   },
   "active": "65d8be7690cc10f2",
   "lastOpenFiles": [
+    "原理笔记/Java - 多线程.md",
+    "原理笔记/Mysql - 优化.md",
+    "原理笔记/读书 - 《高性能 MySQL》.md",
+    "images/Mysql - 优化-24.png",
+    "images/Mysql - 优化-23.png",
+    "images/Mysql - 优化-22.png",
+    "images/Mysql - 优化-21.png",
+    "原理笔记/Java - 集合.md",
     "images/Mysql - 优化-20.png",
     "images/Mysql - 优化-19.png",
     "images/Mysql - 优化-18.png",
     "images/Mysql - 优化-17.png",
     "images/Mysql - 优化-16.png",
     "images/Mysql - 优化-15.png",
-    "images/Mysql - 优化-14.png",
-    "images/Mysql - 优化-13.png",
-    "images/Mysql - 优化-12.png",
-    "images/Mysql - 优化-11.png",
-    "images/Mysql - 优化-10.png",
     "原理笔记/Redis - 原理.md",
-    "原理笔记/读书 - 《高性能 MySQL》.md",
-    "原理笔记/Mysql - 优化.md",
     "原理笔记/MySQL 优化.md",
     "技术文档/AurainRPC - 简易 RPC 框架开发.md",
     "原理笔记/源码 - HashMap 源码分析.md",
@@ -235,8 +235,6 @@
     "原理笔记/面试八股 - JVM.md",
     "原理笔记/面试八股 - Java 语言基础.md",
     "原理笔记/笔记 - JWT.md",
-    "原理笔记/Java - 集合.md",
-    "原理笔记/Java - 多线程.md",
     "Spring - value 注解.md",
     "工具文档/Spring Cache - 缓存初识.md",
     "原理笔记/Spring Cloud - Nacos 注册配置中心.md",
