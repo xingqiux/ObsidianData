@@ -188,13 +188,23 @@
               "icon": "lines-of-text",
               "title": "Quiet Outline"
             }
+          },
+          {
+            "id": "faffb1a28ae23bf2",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 314.5
+    "width": 744.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -208,8 +218,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "65d8be7690cc10f2",
+  "active": "faffb1a28ae23bf2",
   "lastOpenFiles": [
+    "images/Mysql - 优化-25.png",
     "原理笔记/Java - 多线程.md",
     "原理笔记/Mysql - 优化.md",
     "原理笔记/读书 - 《高性能 MySQL》.md",
