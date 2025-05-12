@@ -4,7 +4,7 @@
 
 **进程**：当一个程序被运行，从磁盘加载程序代码到内存，这时就是开启了一个进程
 
-**线程**：一个线程就是一个执行流，将指令流中的指令交给 CPU 执行
+**线程**：一个线程就是一个执行流，将指令流中的指令交给 CPU 执行，计算机执行的最小单位
 
 **区别**：
 - 一个进程可以包含多个线程
@@ -68,7 +68,7 @@ public void testRunnable(){
 }
 ```
 
-### 使用 Callable 接口
+### 实现 Callable 接口
 
 Callable 接口可以返回运行结束后的结果，需要先实例化这个类，然后使用这个实例创建一个 FutureTask 类，然后再使用这个 FurureTask 类创建线程 Thread 然后启动线程
 
@@ -132,9 +132,6 @@ class Executor1 implements Runnable{
   
     }  
 }
-
-
-
 ```
 
 ## Runnable 与 Callable 的区别
@@ -142,7 +139,6 @@ class Executor1 implements Runnable{
 1. Runnable 没有返回值，Callable 有返回值
 2. Callable 可以配合 FutureTask 异步获取执行的结果
 3. Callable 可以抛出异常，但 Runnable 无法抛出异常只能内部消化
-
 
 ## Java 的线程包括哪些状态
 
@@ -633,13 +629,12 @@ public ThreadPoolExecutor(int corePoolSize,
 `corePoolSize` 核心线程数目
 `maximumPoolSize` 最大线程数目 = （核心线程数 + 救济线程最大数目）
 `keepAliveTime` 生存时间 - 救急线程生存时间，生存时间内没有新任务，此线程资源就会被释放
-`unti` 时间单位 - 救急线程的生存时间单位，如秒、毫秒等
-`workQueue`- 当没有空闲的核心线程时，新来的任务就会加入到此队列排队，队列满时会创建救 急线程执行任务
+`unti` 时间单位 - 空闲线程的生存时间单位，如秒、毫秒等
+`workQueue`- 当没有空闲的核心线程时，新来的任务就会加入到此队列排队，队列满时会创建空闲线程执行任务
 `threadFactory` 线程工厂 - 可以定制线程对象的创建，例如线程名字，是否是守护线程等
 `handler` 拒绝策略 - 当所有线程都在繁忙，且 workQueue 也满时，会触发拒绝策略 
 
 ### 线程池执行原理
-
 ![[Java - 多线程-22.png|750]]
 
 首先提交任务，**判断核心线程**是否满了，如果没满直接执行，满了**判断阻塞队列**是否满，如果没满放入阻塞队列，满了则判断是否达到了**最大线程数**，如果没有达到则创建救急线程执行任务，如果线程数也达到了最大线程数，则开始执行**拒绝策略**。
