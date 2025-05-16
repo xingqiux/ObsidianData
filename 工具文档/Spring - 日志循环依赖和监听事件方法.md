@@ -71,20 +71,6 @@ public class SysLogEvent extends ApplicationEvent {
 ### 步骤2：修改LogAspect切面（common-log模块）
 
 ```java
-package com.atguigu.spzx.common.log.aspect;
-
-import com.atguigu.spzx.common.log.annotation.Log;
-import com.atguigu.spzx.common.log.event.SysLogEvent;
-import com.atguigu.spzx.common.log.utils.LogUtil;
-import com.atguigu.spzx.model.entity.system.SysOperLog;
-import lombok.extern.slf4j.Slf4j;
-import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.Around;
-import org.aspectj.lang.annotation.Aspect;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationEventPublisher;
-import org.springframework.core.annotation.Order;
-import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
@@ -124,17 +110,6 @@ public class LogAspect {
 ### 步骤3：创建事件监听器（manager模块）
 
 ```java
-package com.atguigu.spzx.manager.listener;
-
-import com.atguigu.spzx.common.log.event.SysLogEvent;
-import com.atguigu.spzx.manager.mapper.SysOperLogMapper;
-import com.atguigu.spzx.model.entity.system.SysOperLog;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.event.EventListener;
-import org.springframework.scheduling.annotation.Async;
-import org.springframework.stereotype.Component;
-
 @Component
 @Slf4j
 public class SysLogEventListener {

@@ -7,11 +7,11 @@ Spring Cache只是提供了一层抽象，底层可以切换不同的cache实现
 
 针对不同的缓存技术需要实现不同的CacheManager：
 
-| **CacheManager**    | **描述**                           |
-| ------------------- | ---------------------------------- |
-| EhCacheCacheManager | 使用EhCache作为缓存技术            |
+| **CacheManager**    | **描述**                    |
+| ------------------- | ------------------------- |
+| EhCacheCacheManager | 使用EhCache作为缓存技术           |
 | GuavaCacheManager   | 使用Google的GuavaCache作为缓存技术 |
-| RedisCacheManager   | 使用Redis作为缓存技术              |
+| RedisCacheManager   | 使用Redis作为缓存技术             |
 
 
 

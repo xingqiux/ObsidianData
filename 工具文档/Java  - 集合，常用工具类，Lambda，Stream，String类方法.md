@@ -1,5 +1,5 @@
 ## 一、Java 集合框架（Collection Framework）
-[[Java -  集合框架]]
+[[Java -  集合框架指南]]
 
 ## 二、常用工具类
 
